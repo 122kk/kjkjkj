@@ -1,0 +1,544 @@
+
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			* { margin:0; padding:0;}
+			.neirontouhead_box{
+				border-bottom: 2px solid gainsboro;
+				height: 120px;
+				background-color: #f9f9f9;
+			}
+			ul li{
+				border-left: 2px solid gainsboro;
+				text-align: center;
+				list-style: none;
+				font-size: 10px;
+				padding: 8px;
+			}
+			.two_ul_li{
+				border-left: none;
+			}
+			.neirong_daohanglan ul li{
+				float: left;
+			}
+			.neirong_daohanglan a{
+				font-size: 10px;
+				padding-top: 2000px;
+			}
+			.weiwenzi{
+				padding-left: 426px;
+			
+			}
+			.neirong_daohanglan{
+				border-bottom: 1px solid gainsboro;
+				width: 1100px;
+				height: 31px;
+				position: absolute;/* 控制盒子保持中间 */
+				left: 50%;
+				transform: translate(-50%,0);
+			}
+			.neirong_head_tuoian{
+				float: left;
+				
+			}
+			.neirong_head_sousuokuang{
+				float: right;
+			}
+			#choose{
+				color: lightgray;
+				height: 30px;
+				border: none;
+			}
+			.one{border: 2px solid gainsboro;
+				position: absolute;
+				right: 1px;}
+			#search{
+			   	width: 30px;
+			   	height:19px;
+				position: relative;
+				top: 6px;
+				margin: 0;
+				padding: 0;
+			}
+			.head_picture_box{
+				border: none;
+				width: 200px;
+				position: absolute;
+				top: 5px; left: 680px;
+			}
+			.n_head_box{
+				border: none;
+				width: 1100px;height: 70px;
+				position: relative;/* 控制盒子保持中间 */
+				left: 50%; top: 50px;
+				transform: translate(-50%,0);
+			}
+			
+			.neir_body_left_box{
+				width: 650px;
+				border: none;
+				position: absolute;
+				right: 43%;top: 150px;
+				z-index: -1;
+				/* height: 600px; */
+			}
+			.neir_biaoti{
+				border-bottom: 1px solid #C0C0C0;
+				height: 140px;
+			}
+			.neir_biaoti h3{
+				font-size: 30px;
+				text-align: center;
+				font-weight: 500;
+			}
+			.neir_biaoti span{
+				font-size: 10px;
+				color: #CCCCCC;
+			}
+			.fenxiang{margin-left: 300px;}
+			.neir_body_left_box p{
+				font-family: "微软雅黑";
+				line-height: 30px;
+				text-indent: 2em;
+				margin-top: 30px;
+			}
+			
+			
+			.neir_body_right_box{
+				width: 410px;
+				border: none;
+				position: absolute;
+				left: 59%;top: 150px;
+				z-index: -1;
+			}
+			.chinashier_picture{
+				width: 140px; height: 140px;
+				border-radius: 50%;
+			}
+			.neir_body_right_box h2{
+				font-size: 36px;
+				padding: 50px;
+				font-weight: 500;
+			}
+			.neir_body_right_box p{
+				border-bottom: 1px solid #C0C0C0;
+				font-size: 17px;
+				margin-top: 20px;
+			}
+			.neir_body_right_box h3{
+				color: #21d7ff;
+				font-size: 35px;
+				border-bottom: 4px solid #21D7FF;
+				display: inline-block;
+			}
+			.hui_xian{
+				border: none;
+				border-top: 3px solid #C0C0C0;
+				width: 100%;
+				position: relative;
+				top: -24px;
+				z-index: -1;
+			}
+			.tuijian_picture{
+				border: none;
+			}
+			tr td{
+				border: none;
+				text-align: center;
+			}
+			td img{
+				width: 100px; height: 100px;
+				border-radius: 50%;
+			}
+			
+			*{margin: 0; padding: 0;}
+			.dibu{
+				border-top: 1px solid #C0C0C0;
+				background-color: #f8f8f8;
+				width: 100%; height: 420px;
+				position: absolute;
+				top: 4300px;
+			}
+			.dibu_picture{
+				position: relative;
+				left: 300px;top: 4200px;
+			}
+			.dibu_zhongjian{
+				border: 1px solid #C0C0C0;
+				width: 680px; height: 420px;
+				margin-left: 500px;
+				margin-top: -1px;
+			}
+			.dibu_zhongjian1{
+				border-bottom: 1px solid #C0C0C0;
+				margin-top: 10px;
+				height: 30px;
+			}
+			.dibu_zhongjian1 span{
+				margin: 10px;
+			}
+			.dibu_zhongjian2{
+				border-bottom: 1px solid #C0C0C0;
+				margin-top: 10px;
+				height: 50px;
+			}
+			.dibu_zhongjian2 span{
+				margin: 5px;
+				font-size: 10px;
+			}
+			.dibu_zhongjian3{
+				border-bottom: 1px solid #C0C0C0;
+				margin-top: 10px;
+				height: 60px;
+			}
+			.dibu_zhongjian3 span{
+				margin: 4px;
+				font-size: 10px;
+			}
+			.dibu_zhongjian4{
+				
+			}
+			.dibu_zhongjian4 span{
+				font-size: 10px;
+				margin: 12px;
+			}
+			.dibu_zhongjian4 p{
+				font-size: 10px;
+				margin-top: 30px;
+			}
+			.dibu_zhongjian4 img{
+				height: 80px;
+			}
+			.dubu_lantiao{
+				background-color: #023F6E;
+				height: 50px;
+				position: relative;
+				top: 4500px;
+			}
+			a{
+				color: #000000;
+			}
+			a:link {text-decoration:none;}
+		</style>
+	</head>
+	<body>
+		<div class="neirontouhead_box">
+			<div class="neirong_daohanglan">
+				<ul>
+					<li class="two_ul_li">China Daily Homepage</li>
+					<li>中文网首页</li>
+					<li>时政</li>
+					<li>资讯</li>
+					<li>财经</li>
+					<li>生活</li>
+					<li>视频</li>
+					<li>专栏</li>
+					<li>双语</li>
+					<li>原创</li>
+					<li>观天下</li>
+					<a class="weiwenzi">登录</a>
+					<a>注册</a>
+				</ul>
+			</div>
+			<div class="n_head_box">
+				<img class="neirong_head_tuoian" src="logo.jpg" >
+				<div class="neirong_head_sousuokuang">
+					<table>
+							<tbody>
+								<tr>
+									<td class="one">
+										<select name="classid" id="choose">
+										<option value="1">站内搜索</option>
+										<option value="2">搜狗搜索</option>
+										<option value="0">中国搜索</option> 
+										<input id="choose" type="text" />
+										<input type="image" src="j-q.jpg" id="search">
+									</td>
+								</tr>
+							</tbody>
+										</select>
+					</table>
+				</div>
+				<div class="head_picture_box">
+					<img src="phone.png" >
+					<a href="">移动新媒体</a>
+				</div>
+			</div>
+		</div>
+		
+			
+			
+			
+		
+		<div class="neir_body_left_box">
+			<div class="neir_biaoti">
+				<h3>【中国那些事儿】“软实力之父”约瑟夫•奈：中美间是“合作竞争”关系</h3>
+				<br>
+				<span>来源：中国日报网2021-05-07 17:06</span>
+				<span class="fenxiang">分享</span>
+				<img src="微博.png" >
+			</div>
+			<p>中国日报网5月7日电 近日，美国著名国际政治学者、哈佛大学肯尼迪政府学院教授
+			约瑟夫·奈在世界报业辛迪加网站发表题为《中美竞争的逻辑》的文章，认为中美关系是
+			一种“合作竞争”，提醒美国不要也不必夸大对华恐惧。美国对华政策能否成功，将取决于
+			中美两国能否在某些领域竞争的同时，在提供全球公共产品方面进行合作。</p>
+			<br>
+			<img src="内容1.png" width="100%">
+			<p>文章说，如果处理不当，美中竞争可能会很危险。但如果美国正确行事，与中国的竞
+			争将是有益的。</p>
+			<p>拜登政府的对华政策能否奏效，部分取决于中国，但也要看美国如何改变。美国必须
+			应对新的全球威胁，比如气候变化和新冠疫情。这场疫情造成的美国死亡人数超过了美国
+			1945年以来所有战争死亡人数的总和。应对这些挑战需要美国与中国和其他国家合作。</p>
+			<p>因此，拜登面临着一个艰巨的议程。</p>
+			<p>文章称，中国的实力的确不断增强，但美国不必害怕，忽视了自身在诸多领域里的长期
+			优势。比如，美国一直处于关键技术的前沿，美国的研究型大学在全球高等教育排名中占据
+			主导地位。</p>
+			<p>与此同时，中国正在大力投资研发，现在在一些领域已经可以和美国竞争，中国在人工
+			智能方面的进步尤为显著，目标是到2030年成为全球人工智能领域的领跑者。</p>
+			<p>中国的技术进步也不再基于模仿。美国对中国技术挑战的成功回应将更多地取决于美国
+			国内技术的改善，而不是依赖对外制裁。</p>
+			<p>与中国竞争只是拜登面临的问题的一半。</p>
+			<p>正如奥巴马政府时期担任美国国家安全顾问的理查德·丹泽格所说，“21世纪的技术在分
+			布上是全球性的，在后果上同样是全球性的”。</p>
+			<p>传染病、人工智能、计算机病毒、核泄漏……是所有人的麻烦。国际社会需要建立一套基
+			于协商的情报共享机制，以及共同的危机应对计划、规范和条约，这样才能充分缓解风险。</p>
+			<p>文章说，面对气候变化和流行疾病等新的全球问题，美国需要与其他国家合作。美国无
+			法单独行动来解决这些问题，因为温室气体和病毒没有边界，也不会惧怕军事力量。</p>
+			<p>中国提高能源效率，减少二氧化碳排放，美国也会受益。因此，美国必须在与中国竞争
+			的同时与中国合作。</p>
+			<p>一些人担心，中国将把应对气候变化的合作与美国在传统竞争领域的让步联系起来，但
+			这忽略了如果喜马拉雅冰川融化，中国将受到多大的影响。</p>
+			<p>文章最后说，衡量拜登政府对华政策成功与否的一个关键问题是，这两个大国在其他领
+			域激烈竞争的同时，能否在提供全球公共产品方面进行合作。美中关系是一种“合作竞争”，
+			竞争要求对双方给予同等重视，虽然这并不容易。</p>
+			<p>（编辑：齐磊 刘世东）</p>
+		</div>
+		
+		
+		<div class="neir_body_right_box">
+			<img class="chinashier_picture" align="left" src="China事儿.jpeg" >
+			<h2>中国那些事儿</h2>
+			<a href=""><p>【中国那些事儿】“软实力之父”约瑟夫•奈：中美间是“合作竞争”关系</p>
+			<p>【中国那些事儿】细数中国发展成就，欧洲议员吁与华合作：别被美国牵着鼻子走！</p>
+			<p>【中国那些事儿】外媒：香港经济迎来转折 第一季度增速创十一年新高</p>
+			<p>【中国那些事儿】 巴勒斯坦前驻华大使穆斯塔法•萨法日尼：负责任的中国 了不起的中国共产党</p>
+			<p>【中国那些事儿】天和核心舱发射成功 外媒：中国空间站将成人类唯一在轨空间站</p>
+			<p>【中国那些事儿】西班牙共产党主席：中国成功脱贫的根本原因是坚持中国特色社会主义道路</p>
+			<p>【中国那些事儿】美学者：美国所谓新疆"种族灭绝"指控纯属子虚乌有</p>
+			<p>【中国那些事儿】外媒：公益慢火车扶贫有温情</p></a>
+			<br><br>
+			<h3>最热新闻</h3>
+			<p class="hui_xian"></p>
+			<a href=""><p>新华全媒+｜让天下没有难走的路——天空之眼瞰交通</p>
+			<p>消博会：国货也新潮</p>
+			<p>印度新冠疫情持续恶化！印度当地究竟如何？</p>
+			<p>阎维文龚爽倾情演绎 原创MV《初心的梦》</p>
+			<p>中国红十字会向印度提供人道主义支持</p>
+			<p>乌合麒麟的这张“老照片”，细节拉满</p>
+			<p>马克龙：盎格鲁-撒克逊人限制疫苗出口，美国产疫苗100%给美国</p></a>
+			<br><br>
+			<h3>为你推荐</h3>
+			<p class="hui_xian"></p>
+			<table class="tuijian_picture" border="" cellspacing="26" cellpadding="">
+				<tr>
+					<td><img src="推荐1.jpeg" >俄罗斯观察</td>
+					<td><img src="推荐2.jpeg" >图说中国经济</td>
+					<td><img src="推荐3.jpeg" >中国日报网评</td>
+				</tr>
+				<tr>
+					<td><img src="推荐4.jpeg" >中国那些事儿</td>
+					<td><img src="推荐5.jpeg" >世界观</td>
+					<td><img src="推荐6.jpeg" >北京青年报</td>
+				</tr>
+				<tr>
+					<td><img src="推荐7.jpeg" >每日一词</td>
+					<td><img src="推荐8.jpeg" >新华社</td>
+					<td><img src="推荐9.jpeg" >观中国</td>
+				</tr>
+				<tr>
+					<td><img src="推荐10.jpeg" >中央广电总台央视网</td>
+					<td><img src="推荐11.jpeg" >中国经济网</td>
+					<td><img src="推荐12.jpeg" >中国新闻网</td>
+				</tr>
+				<tr>
+					<td><img src="推荐13.jpeg" >中华工商时报</td>
+					<td><img src="推荐14.jpeg" >农民日报</td>
+					<td><img src="推荐15.jpeg" >工人日报</td>
+				</tr>
+				<tr>
+					<td><img src="推荐16.jpeg" >国际商报</td>
+					<td><img src="推荐17.jpeg" >法制日报</td>
+					<td><img src="推荐18.jpeg" >中国青年报</td>
+				</tr>
+				<tr>
+					<td><img src="推荐19.jpeg" >科技日报</td>
+					<td><img src="推荐20.jpeg" >中国证券报</td>
+					<td><img src="推荐21.jpeg" >环球时报</td>
+				</tr>
+				
+				<tr>
+					<td><img src="推荐22.jpeg" >经济参考报</td>
+					<td><img src="推荐23.jpeg" >中央电视台</td>
+					<td><img src="推荐24.jpeg" >中央人民广播电视</td>
+				</tr>
+				<tr>
+					<td><img src="推荐25.jpeg" >解放军报</td>
+					<td><img src="推荐26.jpeg" >中国新闻周刊</td>
+					<td><img src="推荐27.jpeg" >科技部网站</td>
+				</tr><tr>
+					<td><img src="推荐28.jpeg" >人民日报海外版</td>
+					<td><img src="推荐29.jpeg" >中国青年网</td>
+					<td><img src="推荐30.jpeg" >经济日报</td>
+				</tr>
+				<tr>
+					<td><img src="推荐31.jpeg" >光明日报</td>
+					<td><img src="推荐32.jpeg" >中国军网</td>
+					<td><img src="推荐33.jpeg" >求是</td>
+				</tr>
+				
+				<tr>
+					<td><img src="推荐34.jpeg" >中国侨网</td>
+					<td><img src="推荐35.jpeg" >消费日报网</td>
+					<td><img src="推荐36.jpeg" >中国警察网</td>
+				</tr>
+				<tr>
+					<td><img src="推荐37.jpeg" >参考消息网</td>
+					<td><img src="推荐38.jpeg" >中国搜索</td>
+					<td><img src="推荐39.jpeg" >海外网</td>
+				</tr>
+				<tr>
+					<td><img src="推荐40.jpeg" >法制网</td>
+					<td><img src="推荐41.jpeg" >环球网</td>
+					<td><img src="推荐43.jpeg" >中青在线</td>
+				</tr>
+				<tr>
+					<td><img src="推荐44.jpeg" >中工网</td>
+					<td><img src="推荐45.jpeg" >中国西藏网</td>
+					<td><img src="推荐46.jpeg" >中国台湾网</td>
+				</tr>
+				<tr>
+					<td><img src="推荐47.jpeg" >央广网</td>
+					<td><img src="推荐48.jpeg" >光明网</td>
+					<td><img src="推荐49.jpeg" >人民网</td>
+				</tr>
+				<tr>
+					<td><img src="推荐50.jpeg" >国际在线</td>
+					<td><img src="推荐51.jpeg" >中国网</td>
+					<td><img src="推荐52.jpeg" >未来网</td>
+				</tr>
+				<tr>
+					<td><img src="推荐53.jpeg" >每日一词</td>
+					<td><img src="推荐56.jpeg" >一财网</td>
+					<td><img src="推荐54.jpeg" >新华网</td>
+				</tr>
+				<tr><td><img src="推荐55.jpeg" >人民日报</td></tr>
+			</table>
+		</div>
+		<div class="dibu">
+			<div class="dibu_zhongjian">
+				<div class="dibu_zhongjian1">
+					<span>首页</span>
+					<span>时政</span>
+					<span>资讯</span>
+					<span>财经</span>
+					<span>生活</span>
+					<span>视频</span>
+					<span>专栏</span>
+					<span>双语</span>
+					<span>独家</span>
+					<span>招聘</span>
+				</div>
+				<div class="dibu_zhongjian2">
+					<span>地方频道：</span>
+					<span>北京</span>
+					<span>天津</span>
+					<span>河北</span>
+					<span>山西</span>
+					<span>辽宁</span>
+					<span>吉林</span>
+					<span>黑龙江</span>
+					<span>上海</span>
+					<span>江苏</span>
+					<span>浙江</span>
+					<span>福建</span>
+					<span>江西</span>
+					<span>山东</span>
+					<span>河南</span>
+					<span>湖北</span>
+					<span>湖南</span>
+					<span>广东</span>
+					<span>广西</span>
+					<span>海南</span>
+					<span>重庆</span>
+					<span>四川</span>
+					<span>云南</span>
+					<span>贵州</span>
+					<span>西藏</span>
+					<span>陕西</span>
+					<span>新疆</span>
+					<span>深圳</span>
+				</div>
+				<div class="dibu_zhongjian3">
+					<span>友情链接：</span>
+					<span>央广网</span>
+					<span>中国西藏网</span>
+					<span>中国新闻网</span>
+					<span>中国台湾网</span>
+					<span>中国经济网</span>
+					<span>中国青年网</span>
+					<span>光明网</span>
+					<span>国际在线</span>
+					<span>央视网</span>
+					<span>中国网</span>
+					<span>新华网</span>
+					<span>人民网</span>
+				</div>
+				<div class="dibu_zhongjian4">
+					<img src="底部2.jpg" align="left">
+					<span>网上有害信息举报专区</span>
+					<span>防范网络诈骗</span>
+					<span>违法和不良信息举报电话</span>
+					<span>信息网络传播视听节目许可证0108263号</span>
+					<span>京公网安备11010502032503号</span>
+					<span>京网文[2011]0283-097号</span>
+					<span>京ICP备13028878号-6</span>
+					<span>12300电信用户申诉受理中心</span>
+					<span>12318全国文化市场举报</span>
+					<span>网站网络110报警网站</span>
+					<p>中国日报网版权说明：凡注明来源为
+					“中国日报网：XXX（署名）”，除与中国日报
+					网签署内容授权协议的网站外，其他任何网站
+					或单位未经允许禁止转载、使用，违者必究。
+					如需使用，请与010-84883777联系；凡本网
+					注明“来源：XXX（非中国日报网）”的作品，
+					均转载自其它媒体，目的在于传播更多信息，
+					其他媒体如需转载，请与稿件来源方联系，如
+					产生任何问题与本网无关。</p>
+					<p>版权保护：本网登载的内容（包括文字、
+					图片、多媒体资讯等）版权属中国日报网（中报
+					国际文化传媒（北京）有限公司）独家所有使用。
+					 未经中国日报网事先协议授权，禁止转载使用。
+					 给中国日报网提意见：rx@chinadaily.com.cn</p>
+				</div>
+			</div>
+		</div>
+		<img src="底部1.jpg" class="dibu_picture">
+		<div class="dubu_lantiao">
+			
+		</div>
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+

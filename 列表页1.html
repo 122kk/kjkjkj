@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>要闻—中国日报</title>
+		<style type="text/css">
+			* { margin:0; padding:0;}
+			.liebiao_box{
+				border: none;
+				width: 1100px; height: 325px;
+				position: absolute;/* 控制盒子保持中间 */
+				left: 50%;
+				transform: translate(-50%,0);
+			}
+			.neirontouhead_box{
+				border-bottom: 2px solid gainsboro;
+				height: 30px;
+				background-color: #f9f9f9;	
+			}
+			ul li{
+				border-left: 2px solid gainsboro;
+				text-align: center;
+				list-style: none;
+				font-size: 10px;
+				padding: 8px;
+			}
+			.two_ul_li{
+				border-left: none;
+			}
+			.neirong_daohanglan ul li{
+				float: left;
+			}
+			.neirong_daohanglan a{
+				font-size: 10px;
+				
+			}
+			.weiwenzi{
+				padding-left: 380px;
+			
+			}
+			.neirong_head_sousuokuang{
+				float: right;
+				margin-top: 50px;
+			}
+			#choose{
+				color: lightgray;
+				height: 30px;
+				border: none;
+			}
+			.one{border: 2px solid gainsboro;
+				position: relative;
+				right: 1px;}
+			#search{
+			   	width: 30px;
+			   	height:19px;
+				position: relative;
+				top: 6px;
+				margin: 0;
+				padding: 0;
+			}
+			.liebiao_box img{
+				margin-top: 50px;
+			}
+			
+			
+			.lie_body_left_box{
+				width: 650px;
+				border: none;
+				position: absolute;
+				right: 43%;top: 350px;
+				z-index: -1;
+			}
+			.lie_body_right_box{
+				width: 410px;
+				border: none;
+				position: absolute;
+				left: 59%;top: 350px;
+				z-index: -1;
+			}
+			.lie_yaowen{
+				border-top: 2px solid #C0C0C0;
+			}
+			.lie_yaowen img{
+				width: 200px;
+				height: 100px;
+				
+			}
+			.lie_yaowen h3{
+				margin-left: 220px;
+			}
+			.lie_yaowen p{
+				margin-left: 220px;
+			}
+			.lie_wenzi_box{
+				margin-left: 219px;
+				margin-top: 5px;
+				border: none;
+				width: 430px;
+			}
+			.lie_body_right_box h3{
+				color: #023F6E;
+				font-size: 25px;
+				border-bottom: 4px solid #023F6E;
+				display: inline-block;
+			}
+			.lie_hui_xian{
+				border: none;
+				border-top: 4px solid #C0C0C0;
+				width: 100%;
+				position: relative;
+				top: -4px;
+				z-index: -1;
+			}
+			.lie_body_right_box p{
+				border-bottom: 1px dotted #C0C0C0;
+				margin-top: 20px;
+				padding-bottom: 5px;
+			}
+			.lie_body_right_box span{
+				margin-top: 20px;
+			}
+			.tianxia{
+				position: absolute;/* 控制盒子保持中间 */
+				left: 50%;top: 2830px;
+				transform: translate(-50%,0);
+			}
+			
+			*{margin: 0; padding: 0;}
+			.dibu{
+				border-top: 1px solid #C0C0C0;
+				background-color: #f8f8f8;
+				width: 100%; height: 420px;
+				position: absolute;
+				top: 2940px;
+			}
+			.dibu_picture{
+				
+				position: absolute;
+				left: 310px;top: 0px;
+			}
+			.dibu_zhongjian{
+				border: 1px solid #C0C0C0;
+				width: 680px; height: 420px;
+				margin-left: 500px;
+				margin-top: -1px;
+			}
+			.dibu_zhongjian1{
+				border-bottom: 1px solid #C0C0C0;
+				margin-top: 10px;
+				height: 30px;
+			}
+			.dibu_zhongjian1 span{
+				margin: 10px;
+			}
+			.dibu_zhongjian2{
+				border-bottom: 1px solid #C0C0C0;
+				margin-top: 10px;
+				height: 50px;
+			}
+			.dibu_zhongjian2 span{
+				margin: 5px;
+				font-size: 10px;
+			}
+			.dibu_zhongjian3{
+				border-bottom: 1px solid #C0C0C0;
+				margin-top: 10px;
+				height: 60px;
+			}
+			.dibu_zhongjian3 span{
+				margin: 4px;
+				font-size: 10px;
+			}
+			.dibu_zhongjian4{
+				
+			}
+			.dibu_zhongjian4 span{
+				font-size: 10px;
+				margin: 12px;
+			}
+			.dibu_zhongjian4 p{
+				font-size: 10px;
+				margin-top: 30px;
+			}
+			.dibu_zhongjian4 img{
+				height: 80px;
+			}
+			.dubu_lantiao{
+				background-color: #023F6E;
+				height: 50px; width: 100%;
+				
+			}
+			.lie_hui_xian p:hover{
+				text-decoration: underline;
+				cursor: pointer;
+			}
+			.dibu span:hover{text-decoration: underline;
+				cursor: pointer;}
+			a{
+				color: #000000;
+			}
+			a:link {text-decoration:none;}
+		</style>
+	</head>
+	<body>
+		<div class="liebiao_box">
+			<div class="neirontouhead_box">
+				<div class="neirong_daohanglan">
+					<ul>
+						<li class="two_ul_li">China Daily Homepage</li>
+						<li>中文网首页</li>
+						<li>时政</li>
+						<li>资讯</li>
+						<li>财经</li>
+						<li>生活</li>
+						<li>视频</li>
+						<li>专栏</li>
+						<li>双语</li>
+						<li>原创</li>
+						<li>观天下</li>
+						<a class="weiwenzi">登录</a>
+						<a>注册</a>
+					</ul>
+				</div>
+			</div>
+			<img src="列表head.jpg" width="100%">
+			<img src="logo.png" align="left">
+			<div class="neirong_head_sousuokuang">
+				<table>
+				        <tbody>
+				            <tr>
+				                <td class="one">
+									<select name="classid" id="choose">
+									  <option value="1">站内搜索</option>
+									  <option value="2">搜狗搜索</option>
+									  <option value="0">中国搜索</option> 
+				                    <input id="choose" type="text" />
+				                    <input type="image" src="j-q.jpg" id="search">
+				                </td>
+				            </tr>
+				        </tbody>
+					</select>
+				</table>
+			</div>
+		</div>
+		<div class="lie_body_left_box">
+			<a href="内容页.html"><div class="lie_yaowen">
+				<br>
+				<img src="列表1.jpeg" align="left" >
+				<h3>去年底全国户籍人口城镇化率达到45.4%</h3>
+				<p >截至2020年底，14亿人实现户口性质城乡统一，
+				1.1亿流动人口领到居住证，1.2亿农业转移人口落
+				户城镇，户籍人口城镇化率达到45.4%。</p></a>
+				<br><br>
+			</div>
+			<a href="内容页.html"><div class="lie_yaowen">
+				<br>
+				<img src="列表2.jpeg" align="left" >
+				<h3>世卫组织：中国等国有效控制新冠病毒 人们可以正常生活</h3>
+				<p >世卫组织卫生紧急项目负责人迈克尔·瑞安表示，武汉和中国大部分地区体会到了有效控制住病毒所带来的好处。武汉在疫情初期承受了巨大的痛苦，牺牲了很多，随后控制住疫情并保持了这种状态。2021-05-11</p ></a>
+				<br><br>
+			</div>
+			<a href="内容页.html"><div class="lie_yaowen">
+				<br>
+				<img src="列表3.jpeg" align="left" >
+				<h3>“中国在真心实意地帮助我们”</h3>
+				<p >伊都火车站周边曾经一片荒芜，如今已是人流如织。不少像白杨一样的年轻人获得了就业机会，也见证了阿布贾的发展变化。2021-05-11 05:172021-05-11</p ></a>
+				<br><br>
+			</div>
+			<a href="内容页.html"><div class="lie_yaowen">
+				<br>
+				<img src="列表4.jpeg" align="left" >
+				<h3>又有多国发现印度报告的变异新冠病毒感染病例</h3>
+				<p >近日，又有多个国家发现印度最早报告的变异新冠病毒感染病例。2021-05-11 00:082</p ></a>
+				<br><br>
+			</div>
+			<a href="内容页.html"><div class="lie_yaowen">
+				<br>
+				<img src="列表5.jpeg" align="left" >
+				<h3>外交部辟谣美方所谓解放军SARS内部文件</h3>
+				<p >华春莹表示，“美国一些人动辄炒作、援引所谓‘内部文件’‘报告’对中国进行污蔑抹黑，但最终都被事实和真相证明他们要么是恶人先告状，要么是在做断章取义、有罪推定的恶意解读，要么是在散布彻头彻尾的谎言”。2021-05-10 21:57</p ></a>
+				<br><br>
+			</div>
+			<a href="内容页.html"><div class="lie_yaowen">
+				<br>
+				<img src="列表6.jpeg" align="left" >
+				<h3>华春莹五问美方所谓新闻自由</h3>
+				<p >华春莹说，美方一些人借口新闻和言论自由不断无端抹黑攻击中国，这种做法本身就是在散布虚假信息，是对真正的自由和民主的亵渎。2021-05-10 21:57</p ></a>
+				<br><br>
+			</div>
+			<a href="内容页.html"><div class="lie_yaowen">
+				<br>
+				<img src="列表7.jpeg" align="left" >
+				<h3>杭州通报“金钱豹外逃事件”：三只豹子4月19日就已逃逸</h3>
+				<p >由于园区饲养人员在工作交接班时没有严格按照操作流程，三只金钱豹于4月19日上午逃逸。其后杭州野生动物世界没有上报，也没有对外公布，存在严重的瞒报行为。2021-05-10 21:57</p ></a>
+				<br><br>
+			</div>
+			<a href="内容页.html"><div class="lie_yaowen">
+				<br>
+				<img src="列表8.jpeg" align="left" >
+				<h3>华春莹“加班”回应的这件事，也令外国网友愤怒</h3>
+				<p >5月9日本来是一个休息日，外交部没有例行发布会，但是发言人华春莹还是加了个班，第一时间对阿富汗连环袭击做出回应。2021-05-10 21:39</p ></a>
+				<br><br>
+			</div>
+			<a href="内容页.html"><div class="lie_yaowen">
+				<br>
+				<img src="列表9.jpeg" align="left" >
+				<h3>观中国 | 别人都在反对“仇恨亚裔”，他们却高呼“摧毁中国”，他们是谁？</h3>
+				<p >今年3月21日，就在美国多地反对仇视亚裔的抗议活动进行得如火如荼时，美国首都华盛顿却出现了一场“摧毁中国”汽车游行。参加游行的车队悬挂“遏制中国”“中共屠杀8000万中国人”等标语。2021-05-10</p ></a>
+				<br><br>
+			</div>
+			<a href="内容页.html"><div class="lie_yaowen">
+				<br>
+				<img src="列表10.jpeg" align="left" >
+				<h3>北京广电局：网络综艺节目不得设置花钱买投票环节</h3>
+				<p >日前，北京市广播电视局印发《关于进一步加强网络综艺节目管理工作的通知》要求，网络综艺节目不得设置“花钱买投票”环节，严禁刻意引导、鼓励网民采取购物、充会员等物质化手段为选手投票。2021-05-10 16:20</p ></a>
+				<br><br>
+			</div>
+			<a href="内容页.html"><div class="lie_yaowen">
+				<br>
+				<img src="列表11.jpeg" align="left" >
+				<h3>国新办组织境外媒体赴延安、西柏坡采访</h3>
+				<p >5月9日起，国务院新闻办公室组织境外媒体走进陕西延安、河北西柏坡采访，以深入了解中国共产党的奋斗历程，感受中国共产党人的精神风貌。2021-05-10 16:16</p ></a>
+				<br><br>
+			</div>
+			<a href="内容页.html"><div class="lie_yaowen">
+				<br>
+				<img src="列表12.jpeg" align="left" >
+				<h3>去年底全国户籍人口城镇化率达到45.4%</h3>
+				<p >截至2020年底，14亿人实现户口性质城乡统一，1.1亿流动人口领到居住证，1.2亿农业转移人口落户城镇，户籍人口城镇化率达到45.4%。2021-05-10 13:35</p ></a>
+				<br><br>
+			</div>
+			<a href="内容页.html"><div class="lie_yaowen">
+				<br>
+				<img src="列表13.jpeg" align="left" >
+				<h3>图说| 火热黄金周如约而至，旅游业强势升温</h3>
+				<p >刚过去的“五一”长假让大家压抑许久的旅游热情得到释放，全国国内旅游出游2.3亿人次。携程数据显示，“五一”黄金周总订单量同比增长约270%，较2019年同期增幅超过30%。2021-05-10 13:16</p ></a>
+				<br><br>
+			</div>
+			<a href="内容页.html"><div class="lie_yaowen">
+				<br>
+				<img src="列表14.jpeg" align="left" >
+				<h3>美国传染病专家福奇：美国新冠肺炎死亡病例数可能被低估</h3>
+				<p >日前，美国华盛顿大学一项研究认为美国新冠肺炎死亡病例数可能高达90万例。2021-05-10 11:34</p ></a>
+				<br><br>
+			</div>
+			<a href="内容页.html"><div class="lie_yaowen">
+				<br>
+				<img src="列表15.png" align="left" >
+				<h3>中国红十字会援助印度抗疫物资抵达班加罗尔</h3>
+				<p >首批援助印度的抗疫物资已于5月9日上午由成都运往印度班加罗尔。该批抗疫物资包括100台制氧机、20台无创呼吸机和20台有创呼吸机。2021-05-10 10:26</p ></a>
+				<br><br>
+			</div>
+			</div>
+			<div class="lie_body_right_box">
+				<br>
+				<h3>热点</h3>
+				<div class="lie_hui_xian"></div>
+				<a href="内容页.html"><p>去年底全国户籍人口城镇化率达到45.4%</p>
+				<p>图说| 火热黄金周如约而至，旅游业强势升温</p>
+				<p>美国传染病专家福奇：美国新冠肺炎死亡病例数可能被低估</p>
+				<p>中国红十字会援助印度抗疫物资抵达班加罗尔</p>
+				<p>中国共产党百科∣南昌起义 the Nanchang Uprising</p>
+				<p>总台海峡时评丨吴钊燮等“台独”顽固分子终将被历史审判和清算</p>
+				<p>印度新冠疫情持续恶化！印度当地究竟如何？</p>
+				<p>中国红十字会向印度提供人道主义支持</p></a>
+				<br>
+				<a href="内容页.html"><img src="热点1.jpg" width="100%"></a>
+				<br>
+				<h3>图片推荐</h3>
+				<div class="lie_hui_xian"></div>
+				<br>
+				<a href="内容页.html"><span>成都隋唐窑址博物馆开放迎客</span></a>
+				<br><br>
+				<a href="内容页.html"><img src="热点2.png" width="100%"></a>
+				<br><br>
+				<a href="内容页.html"><span>动物母子母亲节</span></a>
+				<br><br>
+				<a href="内容页.html"><img src="热点3.jpg" width="100%"></a>
+				<br><br>
+				<a href="内容页.html"><span>700斤蓝鳍金枪鱼上演“开鱼秀”</span></a>
+			</div>
+			<a href="内容页.html"><img src="天下.jpg" width="1100px" class="tianxia"></a>
+			<div class="dibu">
+				
+				<div class="dibu_zhongjian">
+					<div class="dibu_zhongjian1">
+						<span>首页</span>
+						<span>时政</span>
+						<span>资讯</span>
+						<span>财经</span>
+						<span>生活</span>
+						<span>视频</span>
+						<span>专栏</span>
+						<span>双语</span>
+						<span>独家</span>
+						<span>招聘</span>
+					</div>
+					<div class="dibu_zhongjian2">
+						<span>地方频道：</span>
+						<span>北京</span>
+						<span>天津</span>
+						<span>河北</span>
+						<span>山西</span>
+						<span>辽宁</span>
+						<span>吉林</span>
+						<span>黑龙江</span>
+						<span>上海</span>
+						<span>江苏</span>
+						<span>浙江</span>
+						<span>福建</span>
+						<span>江西</span>
+						<span>山东</span>
+						<span>河南</span>
+						<span>湖北</span>
+						<span>湖南</span>
+						<span>广东</span>
+						<span>广西</span>
+						<span>海南</span>
+						<span>重庆</span>
+						<span>四川</span>
+						<span>云南</span>
+						<span>贵州</span>
+						<span>西藏</span>
+						<span>陕西</span>
+						<span>新疆</span>
+						<span>深圳</span>
+					</div>
+					<div class="dibu_zhongjian3">
+						<span>友情链接：</span>
+						<span>央广网</span>
+						<span>中国西藏网</span>
+						<span>中国新闻网</span>
+						<span>中国台湾网</span>
+						<span>中国经济网</span>
+						<span>中国青年网</span>
+						<span>光明网</span>
+						<span>国际在线</span>
+						<span>央视网</span>
+						<span>中国网</span>
+						<span>新华网</span>
+						<span>人民网</span>
+					</div>
+					<div class="dibu_zhongjian4">
+						<img src="底部2.jpg" align="left">
+						<span>网上有害信息举报专区</span>
+						<span>防范网络诈骗</span>
+						<span>违法和不良信息举报电话</span>
+						<span>信息网络传播视听节目许可证0108263号</span>
+						<span>京公网安备11010502032503号</span>
+						<span>京网文[2011]0283-097号</span>
+						<span>京ICP备13028878号-6</span>
+						<span>12300电信用户申诉受理中心</span>
+						<span>12318全国文化市场举报</span>
+						<span>网站网络110报警网站</span>
+						<p>中国日报网版权说明：凡注明来源为
+						“中国日报网：XXX（署名）”，除与中国日报
+						网签署内容授权协议的网站外，其他任何网站
+						或单位未经允许禁止转载、使用，违者必究。
+						如需使用，请与010-84883777联系；凡本网
+						注明“来源：XXX（非中国日报网）”的作品，
+						均转载自其它媒体，目的在于传播更多信息，
+						其他媒体如需转载，请与稿件来源方联系，如
+						产生任何问题与本网无关。</p>
+						<p>版权保护：本网登载的内容（包括文字、
+						图片、多媒体资讯等）版权属中国日报网（中报
+						国际文化传媒（北京）有限公司）独家所有使用。
+						 未经中国日报网事先协议授权，禁止转载使用。
+						 给中国日报网提意见：rx@chinadaily.com.cn</p>
+					</div>
+				</div>
+				<a href="内容页.html"><img src="底部1.jpg" class="dibu_picture"></a>
+				<div class="dubu_lantiao">
+			</div>
+			
+			
+	</body>
+</html>

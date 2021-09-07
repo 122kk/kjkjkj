@@ -1,0 +1,1430 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>中国日报网-传播中国影响世界</title>
+		<style type="text/css">
+			*{padding: 0; margin: 0;}
+			/* 头部 */
+			.head_box{ 
+				border-bottom: 3px solid #eaeaea;
+				width: 100%; 
+			}
+			.head_picture_box{
+				border: none;
+				width: 1100px; height: 200px;
+				position: relative;
+				left: 50%;
+				transform: translate(-50%,0); 
+			}
+			.head_right_wenzi{
+				border: none;
+				width: auto;
+				float: right;
+				margin-top: 23px;
+				text-align: left;
+			}
+			.head_right_wenzi a{
+				font-size: 14px;
+				color: #e4ebef;
+			}
+			.head_right_wenzi1{
+				border: none;
+				float: right;
+			}
+			.head_sousuokuang_box{
+				border: 1px solid #dadada;
+				float: right;
+			}
+			#sousuokuang{
+				border: none;
+			}
+			#sousuokuang_picture{
+				width: 17px; height: 17px;
+			}
+			
+			/* 导航栏 */
+			.daohang_box{
+				border: none;
+				width: 1100px; 
+				position: relative;
+				left: 50%;
+				transform: translate(-50%,0); 
+			}
+			.left_xian{
+				font-size: 25px;
+				border-left: 2px solid #dfdfdf;
+				width: 86px; height: 40px;
+				padding-left: 22px;
+			}
+			.left_xian1{
+				font-size: 25px;
+				border-left: none;
+				width: 86px; height: 40px;
+				padding-left: 22px;
+			}
+			.daohang_box ul li{
+				float: left;
+				list-style: none;
+				position: relative;
+			}
+			.daohang_box ul li ul li{
+				float: none;
+				width: 109px;
+				font-size: 18px;
+				margin-top: 5px;
+				text-align: center;
+			}
+			.daohang_box ul li ul{
+				position: absolute;
+				left: -1px;
+				display: none;
+			}
+			.daohang_box a{color: #FFFFFF;}
+			.daohang_box ul li:hover ul{
+				display: block;
+				background-color: #023F6E;
+				color: white;
+				cursor:pointer
+			}
+			.daohang_box ul li ul li:hover{text-decoration: underline;}
+			.daohang_box ul li:hover{
+				background-color: #023F6E;
+				color: white;
+				cursor:pointer
+			}
+			
+			/* 头条 */
+			.body_box{
+				border: none;
+				width: 1100px; height: auto;
+				position: relative;
+				left: 50%;top: 40px;
+				transform: translate(-50%,0);
+				z-index: -1;
+			}
+			
+			.body_toutaio_box{
+				border: none;
+				width: 1100px;height: 110px;
+				position: relative;
+				left: 50%; top: 40px;
+				transform: translate(-50%,0);
+				z-index: -1;
+			}
+			
+			.body_left_box{
+				border: none;
+				width: 650px; height: auto;
+				float: left;
+				z-index: -1;
+			}
+			
+			/* 轮播图 */
+			.box{
+				width: 650px;
+				height: 400px;
+				margin-left: 0%;
+			
+			}
+			#img1{
+				width: 100%;
+				height: 100%;
+			}
+			#text{
+				width: 650px;
+				height: 80px;
+				font-size: 27px;
+				font-family: 微软雅黑;
+				text-align: center;
+				
+				color:black;
+				position: absolute;
+				left:0px;
+				top: 400px;
+			}
+			#left,#right{
+				width:60px;
+				height: 70px;
+				font-size: 20px;
+				font-family: 微软雅黑;
+				text-align: center;
+				line-height: 70px;
+				background-color: gainsboro;
+				opacity: 0.5;
+				color:#FFFFFF;
+			
+			}
+			#left{
+				position: absolute;
+				top:200px;
+				left:0px;
+			}
+			#right{
+				position: absolute;
+				top: 200px;
+				left: 590px;
+			} 
+			
+			/* 新闻块 */
+			.new_BOX{
+				border-top: 2px solid #C0C0C0;
+				width: 100%;
+				margin-top: 40px;
+			}
+			.new_BOX:hover{
+				background-color: #f1f1f1;
+			}
+			.new_BOX img{
+				width: 200px; height: 120px;
+			}
+			mark{
+				background-color: #023F6E;
+				color: aliceblue;
+			}
+			#new_picture{
+				width: 650px;
+			}
+			
+			/* 专题 */
+			.zhuanti_tupian{
+				width: 180px;
+				height: 90px;
+				
+			}
+			.zhuanti_tupian1{
+				width: 190px;
+				height: 100px;
+				margin-left: 30px;
+			}
+			.zhuanti{
+				border-left: 4px solid #023F6E;
+				color: #023F6E;
+				font-size: 20px;
+			}
+			
+			
+			/* 小表格 */
+			.xiaobiaoge{
+				border-style: none;
+				width: 650px;
+			}
+			.xiaobiaoge tr td:hover{
+				text-decoration: underline;
+				cursor:pointer
+			}
+			.xiaobiaoge1{
+				border-style: none;
+				width: 414px;
+			}
+			.xiaobiaoge1 tr td:hover{
+				text-decoration: underline;
+				cursor:pointer
+			}
+			.xiaobiaoge_box{
+				border: 1px solid #808080;
+				text-align: left;
+				font-size: 5px;
+				color: #808080;
+			}
+			
+			/* 更多连接 */
+			.genduo{
+				border: none;
+				width: 650px;
+				background-color: #f3f3f3;
+				color: #000000;
+				text-align: center;
+			}
+			.genduo:hover{
+				background-color: #023F6E;
+				color: white;
+				cursor:pointer
+			}
+			
+			.body_right_box{
+				border: none;
+				width: 410px; height: auto;
+				float: right;
+				z-index: -1;
+			}
+			/* 微动画 */
+			.weiwenzi{
+				line-height: 34px;
+			}
+			.weiwenzi_a{
+				text-align: right;
+				color: #808080;
+				font-size: 10px;
+			}
+			.weiwenzi:hover{
+				text-decoration: underline;
+				cursor:pointer
+			}
+			.weiwenzi_a:hover{
+				text-decoration: underline;
+				cursor:pointer
+			}
+			
+			/* 专栏 */
+			.zhuanlan{
+				border-top: 4px solid gainsboro;				
+			}
+			.zhuanlan p:hover{
+				text-decoration: underline;
+				cursor: pointer;
+			}
+			.zhuanlan ul li:hover{
+				text-decoration: underline;
+			}
+			.zhuanlan_tupian{
+				width: 110px;
+				height: 120px;
+			}
+			.zhuanlan_tupian_box{
+				border-bottom: 2px solid gainsboro;
+			}
+			.lanzi{
+				border: none;
+				border-top: 4px solid #191970;
+				display: inline-block;
+				position: relative;
+				top: -4px;
+				font-weight: 400;
+				font-size: 18px;
+				color: #023F6E
+			}
+			.fuhao{
+				list-style-type: square;
+				font-size: 16px;
+				list-style-position: inside;
+				line-height: 25px;
+				color: #C0C0C0;
+			}
+			.fuhao span{
+				color: black;
+			}
+			
+			
+			.label1{
+			    position: absolute;
+			    left: 0px;
+			    width: 100px; height: 32px;
+			    font-size: 22px;
+				font-weight: lighter;
+			    color: #CCCCCC;
+			    background: #EBEBEB;
+			    cursor: pointer;
+			}
+			.label2{
+				position: absolute;
+				left: 100px;
+				width: 100px; height: 32px;
+				font-size: 22px;
+				font-weight: lighter;
+				color: #CCCCCC;
+				background: #EBEBEB;
+				cursor: pointer;
+				border-left: 1px solid grey;
+			}
+			.label3{
+			    position: absolute;
+			    left: 202px;
+			    width: 110px; height: 32px;
+			    font-size: 22px;
+				font-weight: lighter;
+			    color: #CCCCCC;
+			    background: #EBEBEB;
+			    cursor: pointer;
+			    border-left: 1px solid grey;
+			}
+			.label4{
+				position: absolute;
+				left: 312px;
+				width: 99px; height: 32px;
+				font-size: 22px;
+				font-weight: lighter;
+				color: #CCCCCC;
+				background: #EBEBEB;
+				cursor: pointer;
+				border-left: 1px solid grey;
+			}
+			.label5{
+			    position: absolute;
+			    left: 0px;
+			    width: 140px; height: 32px;
+			    font-size: 22px;
+				font-weight: lighter;
+			    color: #CCCCCC;
+			    background: #EBEBEB;
+			    cursor: pointer;
+				text-align: center;
+			}
+			.label6{
+				position: absolute;
+				left: 140px;
+				width: 136px; height: 32px;
+				font-size: 22px;
+				font-weight: lighter;
+				color: #CCCCCC;
+				background: #EBEBEB;
+				cursor: pointer;
+				border-left: 1px solid grey;
+				text-align: center;
+			}
+			.label7{
+			    position: absolute;
+			    left: 274px;
+			    width: 143px; height: 32px;
+			    font-size: 22px;
+				font-weight: lighter;
+			    color: #CCCCCC;
+			    background: #EBEBEB;
+			    cursor: pointer;
+			    border-left: 1px solid grey;
+				text-align: center;
+			}
+			.label8{
+			    position: absolute;
+			    left: 0px;
+			    width: 209px; height: 32px;
+			    font-size: 22px;
+				font-weight: lighter;
+			    color: #CCCCCC;
+			    background: #EBEBEB;
+			    cursor: pointer;
+				text-align: center;
+			}
+			.label9{
+				position: absolute;
+				left: 210px;
+				width: 200px; height: 32px;
+				font-size: 22px;
+				font-weight: lighter;
+				color: #CCCCCC;
+				background: #EBEBEB;
+				cursor: pointer;
+				border-left: 1px solid grey;
+				text-align: center;
+			}
+			.contain{
+			        position: relative;
+			        width: 412px;
+			        height: 162px;
+			        text-align: center;
+			        font-family: Arial;
+			    }
+			.contain{overflow: hidden;}
+			.bioage_one{
+				position: relative;
+				top: 32px; left: 0px;
+				background-color: #CCCCCC;
+				color: black;
+				border: 1px solid white;
+			}
+			.bioage_two{
+				position: relative;
+				top: -100px; left: 412px;
+				background-color: #CCCCCC;
+				border: 1px solid white;
+			}
+			.bioage_three{
+				position: relative;
+				top: -233px; left: 875px;
+				background-color: #CCCCCC;
+				border: 1px solid white;
+			}
+			.bioage_four{
+				position: relative;
+				top: -365px; left: 1335px;
+				background-color: #CCCCCC;
+				border: 1px solid white;
+			}
+			.contain_two{overflow: hidden;}
+			.contain_two ul{
+			    /* margin:20px 0; */
+			    padding:0;
+			    width: 1800px;
+			}
+			.contain_two li{
+			    float: left;
+			    width: 414px;
+			    height: 340px;
+				border: none;
+			    list-style: none;
+			    font-size: 16px;
+				color: #000000;
+				position: relative;
+				top: 42px;
+			}
+			.contain_two p{
+				border-bottom: 1px dotted grey;
+				background-color: #EBEBEB;
+				padding-top: 20px;
+				margin-top: 0px;
+			}
+			.contain_two{
+			        position: relative;
+			        width: 410px;
+			        height: 378px;
+			        text-align: left;      
+			}
+			.contain_three{overflow: hidden;}
+			.contain_three:hover{
+				text-decoration: underline;
+				cursor: pointer;
+			}
+			.contain_three ul{
+			    padding:0;
+			    width: 1800px;
+			}
+			.contain_three li{
+			    float: left;
+			    width: 413px;
+			    height: 340px;
+				border: none;
+			    list-style: none;
+			    font-size: 16px;
+				color: #000000;
+				position: relative;
+				top: 40px;
+			}
+			.contain_three p{
+				border-bottom: 1px dotted grey;
+				background-color: #EBEBEB;
+				padding-top: 20px;
+				margin-top: 0px;
+			}
+			.contain_three{
+			        position: relative;
+			        width: 410px;
+			        height: 420px;
+			        text-align: left;      
+			    }
+			.ul_kk{}
+			.color_a td a{color: #000000;}
+			a:link {text-decoration:none;}
+			.color_a{}
+			.color_a td:hover{background-color: #023F6E;}
+			.color_a a:hover{color: white;}
+			#Input1:hover~ul{ margin-left: 0;}
+			#Input1:hover~.label1{ background: white; color: #023F6E; border-top:3px solid #023F6E;}
+			#Input2:hover~ul{ margin-left: -414px;}
+			#Input2:hover~.label2{ background: white; color: #023F6E; border-top:3px solid #023F6E;}
+			#Input3:hover~ul{ margin-left: -876px; }
+			#Input3:hover~.label3{ background: white; color: #023F6E; border-top:3px solid #023F6E;}
+			#Input4:hover~ul{ margin-left: -1338px;}
+			#Input4:hover~.label4{ background: white; color: #023F6E; border-top:3px solid #023F6E;}
+			
+			#Input5:hover~ul{ margin-left: 0;}
+			#Input5:hover~.label5{ background: white; color: #023F6E; border-top:3px solid #023F6E;}
+			#Input6:hover~ul{ margin-left: -414px;}
+			#Input6:hover~.label6{ background: white; color: #023F6E; border-top:3px solid #023F6E;}
+			#Input7:hover~ul{ margin-left: -828px;}
+			#Input7:hover~.label7{ background: white; color: #023F6E; border-top:3px solid #023F6E;}
+			
+			#Input8:hover~ul{ margin-left: 0;}
+			#Input8:hover~.label8{ background: white; color: #023F6E; border-top:3px solid #023F6E;}
+			#Input9:hover~ul{ margin-left: -411px;}
+			#Input9:hover~.label9{ background: white; color: #023F6E; border-top:3px solid #023F6E;}
+			
+			.dibu_box{
+				border-top: 1px solid #dedede;
+				border-bottom: 30px solid #023F6E;
+				background-color: #f5f5f5;
+				width: 100%; height: auto;
+				position: absolute;
+				top: 6460px;
+			}
+			.dibu_left_box{
+				border: none;
+				width: 550px; height: 100%;
+				float: left;
+			}
+			.dibu_center_box{
+				width: 600px;
+				border-left: 1px solid #CCCCCC;
+				border-right: 1px solid #CCCCCC;
+				float: left;
+			}
+			
+			
+			
+			.dibu_zhongjian1{
+				border-bottom: 1px solid #C0C0C0;
+				margin-top: 10px;
+				height: 30px;
+			}
+			.dibu_zhongjian1 span{
+				margin: 10px;
+			}
+			.dibu_zhongjian2{
+				border-bottom: 1px solid #C0C0C0;
+				margin-top: 10px;
+				height: 50px;
+			}
+			.dibu_zhongjian2 span{
+				margin: 5px;
+				font-size: 10px;
+			}
+			.dibu_zhongjian3{
+				border-bottom: 1px solid #C0C0C0;
+				margin-top: 10px;
+				height: 60px;
+			}
+			.dibu_zhongjian3 span{
+				margin: 4px;
+				font-size: 10px;
+			}
+			.dibu_zhongjian4{
+				
+			}
+			.dibu_zhongjian4 span{
+				font-size: 10px;
+				margin: 12px;
+			}
+			.dibu_zhongjian4 p{
+				font-size: 10px;
+				margin-top: 30px;
+			}
+			.dibu_zhongjian4 img{
+				height: 80px;
+			}
+			.dibu_lantiao{
+				background-color: #023F6E;
+				height: 40px;
+				width: 100%;
+			}
+			
+			
+			a{color: #000000;}
+			a:link {text-decoration:none;}
+		</style>
+	</head>
+	<body>
+		<!-- 头部组件 -->
+		<div class="head_box">
+			<div class="head_picture_box">
+				<img src="toubu.jpeg" width="100%">
+				<br><br>
+				<img src="logo.png " align="left">
+				<div class="head_right_wenzi">
+					<a href="">ENGLLISH</a>
+					<div class="head_right_wenzi1">
+						<img src="phone.png" align="left">
+						<a href="">移动 </a>
+						<a href=""> 媒体</a>
+						<div class="head_sousuokuang_box">
+							<form action="#" method="post">
+								<select id="sousuokuang">
+									<option selected="selected">站内搜索</option>
+									<option>搜狗搜索</option>
+									<option>中国搜索</option>
+								</select>
+								<input type="text" name="" id="sousuokuang" value="" />
+								<input type="image" name="" src="j-q.jpg" id="sousuokuang_picture" onClick="document.formName.submit()">
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<br>
+		<div class="daohang_box">
+			<ul>
+				<li class="left_xian1">首页</li>
+				<li class="left_xian">时政
+					<ul>
+						<a href="">
+						<li>时政要闻</li>
+						<li>评论频道</li>
+						<li>理论频道</li>
+						<li>两岸频道</li>
+						</a>
+					</ul>
+				</li>
+				
+				<li class="left_xian">资讯
+					<ul>
+						<a href="">
+							<li>独家</li>
+							<li>地方频道</li>
+							<li>中国日报专栏</li>
+							<li>中国那些事儿</li>
+							<li>中部崛起</li>
+						</a>
+					</ul>
+				</li>
+				
+				<li class="left_xian">财经
+					<ul>
+						<a href="">
+							<li>证券</li>
+							<li>金融</li>
+							<li>独家</li>
+							<li>金融</li>
+							<li>科技</li>
+							<li>房产</li>
+							<li>产业</li>
+						</a>
+					</ul>
+				</li>
+				
+				<li class="left_xian">生活
+					<ul>
+						<a href="">
+							<li>文化</li>
+							<li>旅游</li>
+							<li>公益</li>
+							<li>创新中国</li>
+						</a>
+					</ul>
+				</li>
+				
+				<li class="left_xian">视频</li>
+				<li class="left_xian">专栏
+					<ul>
+						<a href="">
+							<li>天下专栏</li>
+							<li>站长专栏</li>
+							<li>转念之间</li>
+						</a>
+					</ul>
+				</li>
+				
+				<li class="left_xian">双语
+					<ul>
+						<a href="">
+							<li>每日一词</li>
+							<li>双语新闻</li>
+							<li>新闻热词</li>
+							<li>译词课堂</li>
+						</a>
+					</ul>
+				</li>
+				
+				<li class="left_xian">漫画</li>
+				<li class="left_xian">观天下
+					<ul>
+						<a href="">
+							<li>世界观</li>
+							<li>中国日报网评</li>
+							<li>中国那些事儿</li>
+							<li>图说中国经济</li>
+						</a>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		<br>
+		<div class="body_toutaio_box">
+			<img src="学习时代.jpg" align="right" >
+			<h1>一见·三个维度理解总书记所说的“国之大者”</h1>
+			<p>[一座博物馆，荟萃民族情][@航天人 请查收来自总书记的殷殷嘱托][总书记这样回望湘江战役]</p>
+		</div>
+		<div class="body_box">
+			<div class="body_left_box">
+				
+				<div class="box" id="box">
+					<a href="内容页.html"><img src="轮播图1.jpg" id="img1"></a>
+					<div class="left" id="left">&lt;</div>
+					<div class="right" id="right">></div>
+					<a href="内容页.html"><div class="text" id="text"></div></a>
+				</div>
+				
+				<br><br><br>
+				<a href="内容页.html">
+				<div class="new_BOX">
+					<br>
+					<img src="新闻1.png" align="right">
+					<h3>五一 致敬劳动者</h3>
+					<span>“五一”国际劳动节是属于每一位劳动者的节日，
+					正是劳动者的辛勤奉献造就了我们高速发展的社会和人民的幸福生活。
+					每天努力工作的原因是什么？戳视频看看他们怎么说</span>
+					<br><br>
+					<mark>要闻</mark>
+				</div>
+				</a>
+				<a href="内容页.html">
+				<div class="new_BOX">
+					<br>
+					<img src="新闻2.jpg" align="right">
+					<h3>5月新规来了！哪一条切中了你的关心事？</h3>
+					<span>五一假期将如约而至，一批新规也将于5月1日开始施行。
+					遛狗要系绳、骗医保金要罚款、名人为非法集资打广告要退回酬劳……法治阳光更普照，社会生活更美好。
+					来看看，哪一条切中了你的关心事？</span>
+					<br><br>
+					<mark>要闻</mark>
+				</div>
+				</a>
+				<a href="内容页.html">
+				<div class="new_BOX">
+					<br>
+					<img src="新闻3.jpg" align="right">
+					<h3>美国国际问题专家：“新冷战”不存在，中美全面“脱钩”不可能</h3>
+					<span>美国哈佛大学肯尼迪政府学院教授、“软实力”概念提出者约瑟夫·奈日前表示，
+					中美之间没有“新冷战”，全面“脱钩”不可能，对两国关系持相对乐观态度。</span>
+					<br><br>
+					<mark>要闻</mark>
+				</div>
+				</a>
+				<a href="内容页.html">
+				<div class="new_BOX">
+					<br>
+					<img src="新闻4.png" align="right">
+					<h3>【中国那些事儿】 巴勒斯坦前驻华大使穆斯塔法•萨法日尼：负责任的中国 了不起的中国共产党</h3>
+					<span>本期《中国那些事儿》的主人公来头可厉害了，他是新中国成立以来第一位获得北京大学国际政治和国际关
+					系专业博士学位的留学生，巴勒斯坦前驻华大使穆斯塔法•萨法日尼。</span>
+					<br><br>
+					<mark>中国那些事儿</mark>
+				</div>
+				</a>
+				<a href="内容页.html">
+				<div class="new_BOX">
+					<br>
+					<span class="zhuanti">专题 · 推荐</span>
+					<br><br>
+					<img class="zhuanti_tupian" src="专题1.jpg" align="left">
+					<img class="zhuanti_tupian1" src="专题2.jpg" >
+					<img class="zhuanti_tupian" src="专题3.jpg" align="right">
+				</div>
+				</a>
+				<a href="内容页.html">
+				<div class="new_BOX">
+					<br>
+					<img src="新闻5.png" align="right">
+					<h3>“这里，有无数香港青年的梦想”</h3>
+					<span>波澜不惊的人生，遇到怎样的机遇才能改变？
+					这是香港青年李培的答案——《一个奇妙的机遇》。</span>
+					<br><br>
+					<mark>要闻</mark>
+				</div>
+				</a>
+				<a href="内容页.html">
+				<div class="new_BOX">
+					<br>
+					<img src="新闻6.jpg" align="right">
+					<h3>生逢盛世，当不负盛世：湾区新青年的快闪和背后的故事</h3>
+					<span>今年五四青年节期间，粤港澳大湾区11座城市的青年，通过快闪
+					活动用歌声唱响《我和我的祖国》，致青春，敬未来。</span>
+					<br><br>
+					<mark>要闻</mark>
+				</div>
+				</a>
+				<a href="内容页.html">
+				<div class="new_BOX">
+					<br>
+					<img src="新闻3.jpg" align="right">
+					<h3>“我们的生物钟与任务同步”</h3>
+					<span>中国空间站建设是一项长期工程，步步关键、
+					关联紧密，这背后离不开各个岗位的科研技术人员保驾护航。
+					这些奋战在一线的航天人，用智慧与汗水托举起祖国的航天事业。</span>
+					<br><br>
+					<mark>人民网</mark>
+				</div>
+				</a>
+				<a href="内容页.html">
+				<div class="new_BOX">
+					<br>
+					<img src="新闻7.jpg" align="right">
+					<h3>马上评｜湾区春意浓，奋斗正当时</h3>
+					<span>这就是青春，因为青春，所以无所畏惧，任何困难都无法阻挡前行的脚步。百年风华正茂，中国共产党永葆
+					青春的背后有着众多深邃密码和“独门法宝”，最根本、最深刻的正是信仰与理想。</span>
+					<br><br>
+					<mark>要闻</mark>
+				</div>
+				</a>
+				<a href="内容页.html">
+				<div class="new_BOX">
+					<br>
+					<img src="新闻8.jpg" align="right">
+					<h3>中国代表：将认真履行5月联合国安理会轮值主席工作</h3>
+					<span>中国常驻联合国代表张军3日举行吹风会，分别向联合国会员国、驻联合国主流媒体介绍中方担任安理会5月轮值主席的工作考虑。他表示，中方
+					将加强同安理会成员和各方沟通协商，认真履行职责，推动安理会切实发挥作用。</span>
+					<br><br>
+					<mark>要闻</mark>
+				</div>
+				</a>
+				<a href="内容页.html">
+				<div class="new_BOX">
+					<br>
+					<img src="新闻9.jpg" align="right">
+					<h3>怒赞！医生景区救人获终身免门票</h3>
+					<span>得知赵医生见义勇为的事迹后，洛阳白云山旅游度假区对赵一品医生送出了感谢信，
+					免除他此行在白云山的所有游览、住宿费用，并可终身免门票游览洛阳白云山。</span>
+					<br><br>
+					<mark>要闻</mark>
+				</div>
+				</a>
+				<a href="内容页.html">
+				<div class="new_BOX">
+					<br>
+					<img src="新闻10.png" align="right">
+					<h3>菲律宾总统杜特尔特接种中国新冠疫苗：感觉不错</h3>
+					<span>菲律宾总统杜特尔特3日晚接种中国新冠疫苗，现年76岁的杜特尔特在视频中说，他“感觉不错”。</span>
+					<br><br>
+					<mark>国际滚动</mark>
+				</div>
+				</a>
+				<a href="内容页.html">
+				<div class="new_BOX">
+					<br>
+					<img src="新闻11.jpg" align="right">
+					<h3>五一假期返程高峰将至 合理错峰回程</h3>
+					<span>五一假期过半，明后天将陆续进入返程高峰，
+					公安部提示广大驾驶人合理错峰回程。</span>
+					<br><br>
+					<mark>要闻</mark>
+				</div>
+				</a>
+				<a href="内容页.html">
+				<div class="new_BOX">
+					<br>
+					<img src="新闻12.jpg" align="right">
+					<h3>莫里森否认印度入境禁令“出于种族主义动机”，网友：他当初为什么不禁来自英美的航班？</h3>
+					<span>当地时间3日，澳总理莫里森出面否认有关种族歧视的指控。不过，网友对莫里森的辩解看法不尽相同，有人提及当初欧美国家疫情严重时澳方并未禁止来自英国、
+					美国的航班，却在印度疫情恶化时实施禁令，反问“为什么这种歧视只针对印度？”</span>
+					<br><br>
+					<mark>要闻</mark>
+				</div>
+				</a>
+				<a href="内容页.html">
+				<div class="new_BOX">
+					<img src="toubu.jpeg" id="new_picture">
+					<div class="xiaobiaoge_box">
+						<table class="xiaobiaoge" border="0" cellspacing="8" cellpadding="0">
+							<tr>
+								<td>决胜2020</td>
+								<td>第三届中国国际进口博览会</td>
+							</tr>
+							<tr>
+								<td>“追梦火焰蓝”网络主题宣传活动</td>
+								<td>第七届互联网大会</td>
+							</tr>
+							<tr>
+								<td>共舞长江经济带•看高质量发展</td>
+								<td>百名摄影师聚焦脱贫攻坚</td>
+							</tr>
+						</table>
+					</div>
+					<br>
+					<img src="新闻13.png" align="right">
+					<h3>比尔·盖茨与梅琳达宣布离婚</h3>
+					<span>当地时间3日，比尔·盖茨与梅琳达通过联合声明，宣布结束双方27年的婚姻，声明中称，两人认为继续保持婚姻关系已经无法让彼此继续提升。</span>
+					<br><br>
+					<mark>要闻</mark>
+				</div>
+				</a>
+				<a href="内容页.html">
+				<div class="new_BOX">
+					<br>
+					<img src="新闻14.jpg" align="right">
+					<h3>第25届“中国青年五四奖章”评选揭晓</h3>
+					<span>为集中展示新时代青年听党指挥、矢志奋斗的精神风貌，激励广大青年心怀“国之大者”，奋勇建功立业，以优异成绩庆祝党的百年华诞，
+					共青团中央、全国青联日前决定，授予王殳凹等30名同志第25届“中国青年五四奖章”。</span>
+					<br><br>
+					<mark>要闻</mark>
+				</div>
+				</a>
+				<a href="内容页.html">
+				<div class="new_BOX">
+					<br>
+					<img src="新闻15.jpg" align="right">
+					<h3>沿着高速看中国｜文化“大动脉”：行驶连霍高速，品读黄河文明</h3>
+					<span>在这条高速上，有周秦文明发祥地的宝鸡、汉唐文化的典型城市西安、
+					历史文化底蕴深厚的洛阳、宋文化代表城市开封。</span>
+					<br><br>
+					<mark>要闻</mark>
+				</div>
+				</a>
+				<a href="内容页.html">
+				<div class="new_BOX">
+					<img src="广告.jpg" id="new_picture">
+					<br>
+					<img src="新闻16.jpg" align="right">
+					<h3>菲律宾总统杜特尔特接种中国新冠疫苗，现场回应：我感觉不错</h3>
+					<span>当地时间5月3日晚，菲律宾总统杜特尔特接种中国国药新冠疫苗。”
+					杜特尔特回答说：“我感觉不错。</span>
+					<br><br>
+					<mark>国际滚动</mark>
+				</div>
+				</a>
+				<a href="内容页.html">
+				<div class="new_BOX">
+					<br>
+					<img src="新闻17.jpg" align="right">
+					<h3>美国国际问题专家：“新冷战”不存在，中美全面“脱钩”不可能</h3>
+					<span>美国哈佛大学肯尼迪政府学院教授、“软实力”概念提出者约瑟夫·奈日前
+					表示，中美之间没有“新冷战”，全面“脱钩”不可能，对两国关系持相对乐观态度。</span>
+					<br><br>
+					<mark>中国日报网评</mark>
+				</div>
+				</a>
+				<a href="内容页.html">
+				<div class="new_BOX">
+					<br>
+					<img src="新闻18.png" align="right">
+					<h3>观中国 | 新疆老汉体检竟被说成“强制节育”？这是什么奇葩“研究”？</h3>
+					<span>在所有反华智囊中，德国人郑国恩 (Adrian Zenz) 可称得上是“头号狗头军师”：他长期冲在反华一线，爆出了不少“新疆人权问题”的“猛料”。
+					然而问题是，这些“研究成果”充斥着各种伎俩，漏洞百出，根本经不起推敲。</span>
+					<br><br>
+					<mark>观中国ChinaWatch</mark>
+				</div>
+				</a>
+				<a href="内容页.html">
+				<div class="new_BOX">
+					<br>
+					<img src="新闻19.jpeg" align="right">
+					<h3>【中国那些事儿】“软实力之父”约瑟夫•奈：中美间是“合作竞争”关系</h3>
+					<span>中美关系是一种“合作竞争”，美国不要也不必夸大对华恐惧。</span>
+					<br><br>
+					<mark>中国那些事儿</mark>
+				</div>
+				</a>
+				<a href="内容页.html">
+				<div class="new_BOX">
+					<img src="广告3.jpg" id="new_picture">
+					<br>
+					<img src="新闻20.jpeg" align="right">
+					<h3>第五届丝绸之路国际博览会暨中国东西部合作与投资贸易洽谈会于5月11日至15日在陕西省西安市举办</h3>
+					<span>5月7日，陕西省人民政府新闻办公室举办新闻发布会，邀请第五届丝博会执委会副主任兼秘书长马多平出席，介绍本
+					届丝博会有关筹办情况。发布会由陕西省委宣传部新闻发布工作处处长李惠主持。</span>
+					<br><br>
+					<mark>本网专稿</mark>
+				</div>
+				</a>
+				<a href="内容页.html">
+				<div class="new_BOX">
+					<br>
+					<img src="新闻21.jpeg" align="right">
+					<h3>世界观 | 澳大利亚实力演绎，什么叫自作自受啊？</h3>
+					<span>澳大利亚政客为了选票，哄骗一帮愚民反华，又反过来被这种伪民意绑架，自己只好做出更激进的反华姿态。
+					只是苦了澳大利亚的老百姓，一边日子过得越来越苦，一边被忽悠着把所有的屎盆子
+					都扣给中国。就算中国都担了这些骂，又如何？吃亏的不还是澳大利亚人自己吗？</span>
+					<br><br>
+					<mark>世界观</mark>
+				</div>
+				</a>
+				<a href="内容页.html">
+				<div class="new_BOX">
+					<br>
+					<img src="新闻22.jpeg" align="right">
+					<h3>中国国药新冠疫苗获世卫组织紧急使用认证</h3>
+					<span>世界卫生组织7日宣布，由中国医药集团北京生物制品研究
+					所研发的新冠灭活疫苗正式通过世卫组织紧急使用认证。</span>
+					<br><br>
+					<mark>要闻</mark>
+				</div>
+				</a>
+				<a href="内容页.html">
+				<div class="new_BOX">
+					<br>
+					<img src="新闻23.jpeg" align="right">
+					<h3>美研究称美国实际新冠死亡数或超90万 超当前官方数据近六成</h3>
+					<span>当地时间6日，美国华盛顿大学医学院卫生计量与评估研究所IHME发布研究结果，称美国实际死于新冠肺炎的人数可能超过90.5万人，比美国疾控中心公布的最新数据57万人超出58%。</span>
+					<br><br>
+					<mark>中文原创</mark>
+				</div>
+				</a>
+				<br>
+				<a href="列表页1.html"><p class="genduo">更多>></p></a>	
+			</div>
+			
+			<div class="body_right_box">
+				<h2>微动画丨《答案》</h2>
+				<a href="内容页.html"><p class="weiwenzi">李克强详解救急财政资金直达机制要常态化</p>
+				<p class="weiwenzi">记怒江美丽公路股份有限公司总工程师马健</p>
+				<p class="weiwenzi">北京：在高质量发展中赓续红色血脉</p>
+				<p class="weiwenzi">重庆市大渡口区居民“打疫苗像在走贵宾通道”</p>
+				<p class="weiwenzi">“五一”假期十多万名接种人员坚守一线</p>
+				<p class="weiwenzi">首届中国国际消费品博览会6日晚开幕</p>
+				<p class="weiwenzi">“五一”小长假各地文化市场人气旺 丰富多彩</p>
+				<p class="weiwenzi">“五一”小长假最后一天各部门做好应急预案</p>
+				<p class="weiwenzi">【“五一”假期市场扫描】假日消费有新意</p>
+				<p class="weiwenzi">中国电影“五一档”总票房已超11亿元</p>
+				<p class="weiwenzi">党史学习 | 奋斗百年路 启航新征程 | 中国有约</p></a>
+				<a href="列表页.html"><p class="weiwenzi_a">[更多]</p></a>
+				
+				
+				<div class="contain">
+				    <input type="radio" name="sildeInput" value="0" id="Input1" hidden>
+				    <label class="label1" for="Input1">资讯</label>
+				    <input type="radio" name="sildeInput" value="1" id="Input2" hidden>
+				    <label class="label2" for="Input2">财经</label>
+				    <input type="radio" name="sildeInput" value="1" id="Input3" hidden>
+				    <label class="label3" for="Input3">生活</label>
+					<input type="radio" name="sildeInput" value="1" id="Input4" hidden>
+					<label class="label4" for="Input4">时政</label>
+				    <ul class="ul_kk">
+				        <li>
+				        	<table class="bioage_one" border="" cellspacing="0" cellpadding="" width="413px">
+				        		<tr class="color_a" height="50px" >
+				        			<td><a href="">新闻热词</a></td>
+				        			<td rowspan="2"><a href="">粤港澳大湾区</a></td>
+				        			<td><a href="">双语新闻</a></td>
+				        			<td width="60px" colspan="1" rowspan="5"><a href="">原创</a></td>
+				        		</tr> 
+				        		<tr class="color_a" height="40px">  
+				        			<td rowspan="2"><a href="">新时代大讲堂</a></td>
+				        			<td rowspan="2"><a href="">中国那些事儿</a></td>
+				        		</tr>
+				        		<tr class="color_a" height="40px"> 
+				        			<td><a href="">脱贫攻坚云展厅</a></td>
+				        		</tr>
+				        	</table>
+				        </li>
+						<li>
+							<table class="bioage_two" border="" cellspacing="0" cellpadding="" width="420px">
+								<tr class="color_a" height="50px" >
+									<td><a href="">图说中国经济</a></td>
+									<td rowspan="2">独家</td>
+									<td><a href="">广交会</a></td>
+									<td width="60px" colspan="1" rowspan="5"><a href="">声音</a></td>
+								</tr> 
+								<tr class="color_a" height="40px">  
+									<td rowspan="2"><a href="">跨国公司</a></td>
+									<td rowspan="2"><a href="">脱贫攻坚</a></td>
+								</tr>
+								<tr class="color_a" height="40px"> 
+									<td><a href="">六稳六保</a></td>
+								</tr>
+							</table>
+						</li>
+						<li>
+							<table class="bioage_three" border="" cellspacing="0" cellpadding="" width="413px">
+								<tr class="color_a" height="50px" >
+									<td><a href="">最旅游</a></td>
+									<td rowspan="2"><a href="">酒店大赏</a></td>
+									<td><a href="">最美食</a></td>
+									<td width="60px" colspan="1" rowspan="5"><a href=""></a></td>
+								</tr> 
+								<tr class="color_a" height="40px">  
+									<td rowspan="2"><a href="">时尚</a></td>
+									<td rowspan="2"><a href="">原创</a></td>
+								</tr>
+								<tr class="color_a" height="40px"> 
+									<td><a href="">文化中国</a></td>
+								</tr>
+							</table>
+						</li>
+						<li>
+							<table class="bioage_four" border="" cellspacing="0" cellpadding="" width="413px">
+								<tr class="color_a" height="50px" >
+									<td><a href="">两岸同心</a></td>
+									<td rowspan="2"><a href="">扶贫故事绘</a></td>
+									<td><a href="">中国日报网评</a></td>
+									<td width="60px" colspan="1" rowspan="5"><a href="">世界观</a></td>
+								</tr> 
+								<tr class="color_a" height="40px">  
+									<td rowspan="2"><a href="">百年宏图</a></td>
+									<td rowspan="2"><a href="">共产党百科</a></td>
+								</tr>
+								<tr class="color_a" height="40px"> 
+									<td><a href="">对口帮扶</a></td>
+								</tr>
+							</table>
+						</li>
+				    </ul>
+				</div>
+				<br>
+				<div class="zhuanlan">
+					<a href="内容页.html">
+					<div class="zhuanlan_tupian_box">
+						<p class="lanzi">专栏</p><br>
+						<img class="zhuanlan_tupian" align="left" src="专栏1.jpeg" >
+						<br>
+						<h3>陈新光：“醉驾入刑”10年来 取得显著社会成效和法制成效</h3>
+						<p>根治醉驾任重道远，必须持之以恒严格执法。[更多]</p>
+						<br>
+						<br>
+					</div>
+					</a>
+					<a href="内容页.html">
+					<div class="zhuanlan_tupian_box">
+						<img class="zhuanlan_tupian" align="left" src="专栏2.jpeg" >
+						<br>
+						<h3>李红日：铭记光辉历史 传承红色基因</h3>
+						<p>穿越壮丽百年、驰骋锦绣山河、感受中国速度。[更多]</p>
+						<br>
+						<br>
+					</div>
+					</a>
+					<a href="内容页.html">
+					<div class="zhuanlan_tupian_box">
+						<img class="zhuanlan_tupian" align="left" src="专栏3.jpeg" >
+						<br>
+						<h3>鞠传江：“红色基因”是中国共产党的核心生命力</h3>
+						<p>从1921年的“一大”的仅有50多人，到如今的超过9100万人的世界第一大党。[更多]</p>
+						<br><br>
+					</div>
+					</a>
+				</div>
+				
+				<a href="内容页.html"><img src="beinian.jpg" width="100%"></a>
+				<div class="zhuanlan">
+					<p class="lanzi">中国日报漫画</p>
+					<a href="内容页.html"><h2> "政治病毒"</h2><br>
+					<img src="轮播图3.jpg" width="100%" height="200px" ></a>
+				</div>
+				<div class="zhuanlan">
+					<p class="lanzi">视频</p>
+					<a href="内容页.html"><h3>【中国那些事儿】 巴勒斯坦前驻华大使穆斯塔法•萨法日尼：负责任的中国 了不起的中国共产党</h3><br>
+					<img src="新闻4.png" width="100%" height="200px" ></a>
+				</div>
+				<div class="zhuanlan">
+					<a href="内容页.html">
+					<p class="lanzi">中国那些事儿</p>
+					<h3>【中国那些事儿】外媒：香港经济迎来转折 第一季度增速创十一年新高</h3><br>
+					<img src="专题4.png" width="100%" height="200px" >
+					<p class="zhuanlan_tupian_box">香港从疫情和社会动荡中恢复，经济发展呈现更强劲的势头。</p><br>
+					<h3 class="zhuanlan_tupian_box">【中国那些事儿】 巴勒斯坦前驻华大使穆斯塔法•萨法日尼：
+					负责任的中国 了不起的中国共产党</h3>
+					<img src="新闻4.png" width="100%" height="200px">
+					<p class="zhuanlan_tupian_box">本期《中国那些事儿》的主人公来头可厉害了，他是新中国成立以来第一位获得北京大学国际政治和
+					国际关系专业博士学位的留学生，巴勒斯坦前驻华大使穆斯塔法•萨法日尼。</p><br>
+					</a>
+				</div>
+				<div class="zhuanlan">
+					<p class="lanzi">地方新闻联播</p>
+					<ul class="fuhao">
+						<a href="内容页.html">
+						<li><span>今年的就业形势如何？有何期盼？听年轻人择业想法</span></li><br>
+						<li><span>“采脸”不该太“任性” 任意、无序采集人脸需严管</span></li><br>
+						<li><span>被困电梯求助无门 应急处置机制亟待完善</span></li><br>
+						<li><span>盲盒别成监管的“盲区”</span></li><br>
+						<li><span>假日经济强势回归的中国范本</span></li><br>
+						<li><span>我国可再生能源发电装机达9.48亿千瓦</span></li><br>
+						<li><span>为线下消费“后悔药”升级点赞</span></li><br>
+						</a>
+					</ul>
+				</div>
+				<img src="专题5.png" width="100%">
+				<div class="contain_two">
+				    <input type="radio" name="sildeInput" value="0" id="Input5" hidden>
+				    <label class="label5" for="Input5">最新热文</label>
+				    <input type="radio" name="sildeInput" value="1" id="Input6" hidden>
+				    <label class="label6" for="Input6">一天</label>
+				    <input type="radio" name="sildeInput" value="1" id="Input7" hidden>
+				    <label class="label7" for="Input7">一周</label>
+				
+				    <ul>
+				        <li>
+							<a href="内容页.html">
+								<p>蒂星钻石: GIA天然钻石海外直通车</p>
+								<p>数字人民币亮相消博会</p>
+								<p>“妈妈，我在梧州挺好的”</p>
+								<p>重磅！上海最新驾考新规将实施，6月1日起需居住证才能考驾照！</p>
+								<p>宁夏金凤蝶变：从“移民乡镇”到“产业强镇”</p>
+								<p>今年端午节假日确定 国务院放假安排：不调休</p>
+								<p>【中国那些事儿】中国疫苗获世卫认证 外媒：让世界有了更多选择</p>
+							</a>
+						</li>
+				        <li>
+							<a href="内容页.html">
+							<p>病毒变种</p>
+				        	<p>观中国 | 新疆老汉体检竟被说成“强制节育”？这是什么奇葩“研究”？</p>
+				        	<p>首届中国国际消费品博览会正式开展</p>
+				        	<p>中国品牌力指数发布，光大信用卡连续五年品牌力增长</p>
+				        	<p>中国的发展对加拿大意味着什么？中加关系将何去何从？中国驻加拿大大使解读</p>
+				        	<p>数字人民币亮相消博会</p>
+				        	<p>吴钊燮接受澳媒采访散布“台独”言论，国台办回应</p>
+							</a>
+						</li>
+				        <li>
+							<a href="内容页.html">
+				        	<p>【中国那些事儿】 巴勒斯坦前驻华大使穆斯塔法•萨法日尼：负责任的中国 了不起的中国共产党</p>
+				        	<p>李克强详解救急的财政资金直达机制为何要常态化</p>
+				        	<p>五一·致敬劳动者</p>
+				        	<p>比尔·盖茨与梅琳达宣布离婚</p>
+				        	<p>美国海洋生物学家：美国必须制止日本排放核废水计划</p>
+				        	<p>印度官员表示该国第三波新冠疫情不可避免</p>
+							<p>“美国优先”戳破“美印友好”谎言</p>
+							</a>
+				        </li>
+				    </ul>	
+				</div>
+				<a href="内容页.html"><img src="专题6.jpg" width="100%"></a>
+				<a href="内容页.html"><img src="专题7.jpg" width="100%"></a>
+				<div class="contain_three">
+				    <input type="radio" name="sildeInput" value="0" id="Input8" hidden>
+				    <label class="label8" for="Input8">传媒动态</label>
+				    <input type="radio" name="sildeInput" value="1" id="Input9" hidden>
+				    <label class="label9" for="Input9">新闻速递</label>
+				    <ul>
+				        <li>
+							<a href="内容页.html">
+							<p>中国日报社参评第三十一届中国新闻奖报纸新闻专栏初评作品的公示</p>
+							<p>中国日报社参评第三十一届中国新闻奖媒体融合奖项初评作品的公示</p>
+							<p>第三十一届中国新闻奖试点报送单位推荐作品公示</p>
+							<p>关于中国日报网参加第三十一届中国新闻奖网络新闻作品初评的公示</p>
+							<p>中国日报社申请新闻记者证公示名单</p>
+							<p>中国日报社申请新闻记者证公示名单</p>
+							<p>中国日报社2020年面向社会公开招聘公示</p>
+							</a>
+						</li>
+				        <li>
+							<a href="内容页.html">
+				        	<p>乌合麒麟的这张“老照片”，细节拉满</p>
+				        	<p>观中国 | 野鸡大学、山寨智库……那些造谣抹黑新疆的西方“智囊”都是什么货色？</p>
+				        	<p>首部红十字应急救护公益宣传片正式发布</p>
+				        	<p>农业农村部启动公益帮扶行动，阿里助力10个脱贫县打造农业品牌</p>
+				        	<p>原创芭蕾舞剧《宝塔山》在沪首演</p>
+				        	<p>台陆委会诬称香港特区政府 “打压言论自由” 国台办：典型的贼喊捉贼</p>
+				        	<p>国台办：民进党为谋“独”制造假新闻</p>
+							</a>
+						</li>
+				    </ul>
+				</div>
+				<a href="内容页.html"><img src="专题8.jpg" width="100%"></a>
+				<div class="xiaobiaoge_box">
+					<table class="xiaobiaoge1" cellspacing="">
+						<tr>
+							<a href="内容页.html">
+							<td>世界超算大赛总决赛将于5月在深圳举行</td></a>
+							<td>调查：您对中国日报网提供的内容服务是否满意？</td>
+							
+						</tr>
+						<tr>
+							<td>天津故事双语网</td>
+						</tr>
+						<tr>
+							<td>中国南海网</td>
+						</tr>
+						
+					</table>
+				</div>
+				
+			</div>
+			
+		</div>
+		
+		<div class="dibu_box">
+			<div class="dibu_left_box">
+				<img src="底部1.jpg" align="right">
+			</div>
+			<div class="dibu_center_box">
+				<div class="dibu_zhongjian1">
+					<span>首页</span>
+					<span>时政</span>
+					<span>资讯</span>
+					<span>财经</span>
+					<span>生活</span>
+					<span>视频</span>
+					<span>专栏</span>
+					<span>双语</span>
+					<span>独家</span>
+					<span>招聘</span>
+				</div>
+				<div class="dibu_zhongjian2">
+					<span>地方频道：</span>
+					<span>北京</span>
+					<span>天津</span>
+					<span>河北</span>
+					<span>山西</span>
+					<span>辽宁</span>
+					<span>吉林</span>
+					<span>黑龙江</span>
+					<span>上海</span>
+					<span>江苏</span>
+					<span>浙江</span>
+					<span>福建</span>
+					<span>江西</span>
+					<span>山东</span>
+					<span>河南</span>
+					<span>湖北</span>
+					<span>湖南</span>
+					<span>广东</span>
+					<span>广西</span>
+					<span>海南</span>
+					<span>重庆</span>
+					<span>四川</span>
+					<span>云南</span>
+					<span>贵州</span>
+					<span>西藏</span>
+					<span>陕西</span>
+					<span>新疆</span>
+					<span>深圳</span>
+				</div>
+				<div class="dibu_zhongjian3">
+					<span>友情链接：</span>
+					<span>央广网</span>
+					<span>中国西藏网</span>
+					<span>中国新闻网</span>
+					<span>中国台湾网</span>
+					<span>中国经济网</span>
+					<span>中国青年网</span>
+					<span>光明网</span>
+					<span>国际在线</span>
+					<span>央视网</span>
+					<span>中国网</span>
+					<span>新华网</span>
+					<span>人民网</span>
+				</div>
+				<div class="dibu_zhongjian4">
+					<img src="底部2.jpg" align="left">
+					<span>网上有害信息举报专区</span>
+					<span>防范网络诈骗</span>
+					<span>违法和不良信息举报电话</span>
+					<span>信息网络传播视听节目许可证0108263号</span>
+					<span>京公网安备11010502032503号</span>
+					<span>京网文[2011]0283-097号</span>
+					<span>京ICP备13028878号-6</span>
+					<span>12300电信用户申诉受理中心</span>
+					<span>12318全国文化市场举报</span>
+					<span>网站网络110报警网站</span>
+					<p>中国日报网版权说明：凡注明来源为
+					“中国日报网：XXX（署名）”，除与中国日报
+					网签署内容授权协议的网站外，其他任何网站
+					或单位未经允许禁止转载、使用，违者必究。
+					如需使用，请与010-84883777联系；凡本网
+					注明“来源：XXX（非中国日报网）”的作品，
+					均转载自其它媒体，目的在于传播更多信息，
+					其他媒体如需转载，请与稿件来源方联系，如
+					产生任何问题与本网无关。</p>
+					<p>版权保护：本网登载的内容（包括文字、
+					图片、多媒体资讯等）版权属中国日报网（中报
+					国际文化传媒（北京）有限公司）独家所有使用。
+					 未经中国日报网事先协议授权，禁止转载使用。
+					 给中国日报网提意见：rx@chinadaily.com.cn</p>
+				</div>
+			</div>
+			
+		</div>
+	</body>
+</html>
+<script>
+			var box =document.getElementById('box');
+			var img =document.getElementById('img1');
+			var left =document.getElementById('left');
+			var right =document.getElementById('right');
+			var arr_img = ['轮播图1.jpg','轮播图2.jpg','轮播图3.jpg','轮播图4.jpg'];
+			var arr_text =['“中国有约 A Date with China”2021年国际媒体主题采访分享会举办 线路一圆满结束','故宫博物院“陶瓷馆”5月1日起重新开放','中国日报漫画：“政治病毒”','“五一”致敬劳动者：每双手都了不起'];
+			var currentIndex =1;
+			function slide(){
+				img.src = arr_img[currentIndex];
+				text.innerText =arr_text[currentIndex]
+				currentIndex =++currentIndex%4;
+
+			}
+			var pause =setInterval(slide,2000);
+	        box.addEventListener('mouseover',function(){
+	        	clearInterval(pause);
+
+	        });
+	        box.addEventListener('mouseout',function(){
+	           pause =setInterval(slide,2000);	
+	        })
+	        left.addEventListener('click',function(){
+	        	currentIndex = --currentIndex%4;
+	        	if(currentIndex < 0){
+	        		currentIndex +=4;
+	        	}
+	        	img.src = arr_img[currentIndex];
+		        text.innerText = arr_text[currentIndex];
+	        })
+	        right.addEventListener('click',function(){
+	        	currentIndex =++currentIndex%4;
+	        	img.src = arr_img[currentIndex];
+				text.innerText = arr_text[currentIndex];
+	        })
+		</script>
